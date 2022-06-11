@@ -1,0 +1,21 @@
+[package]
+name = "one_alloc"
+version = "0.1.0"
+edition = "2021"
+description = "A custom allocator that allows a singular allocation of a specific size known ahead of time."
+license = "Apache-2.0 OR BSL-1.0 OR MIT"
+documentation = "https://docs.rs/one_alloc"
+homepage = "https://github.com/ardaku/one_alloc/blob/stable/CHANGELOG.md"
+repository = "https://github.com/ardaku/one_alloc/"
+include = ["Cargo.toml", "src/", "examples/", "README.md"]
+keywords = ["allocator", "custom", "one", "small", "minimal"]
+categories = ["no-std", "embedded", "memory-management"]
+readme = "README.md"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[dependencies]
